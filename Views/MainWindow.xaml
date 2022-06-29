@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="Gr1" Background="AliceBlue">
-        <TextBox x:Name="TextB1" HorizontalAlignment="Left" Margin="107,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBlock Name="TB1" HorizontalAlignment="Left" Height="193" Margin="158,187,0,0" TextWrapping="Wrap" Text="TB" VerticalAlignment="Top" Width="489" DataContextChanged="TB1_DataContextChanged"/>
-        <Button x:Name="B1" Content="Button" HorizontalAlignment="Left" Margin="681,57,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Frame x:Name="MainFrame" Background="AliceBlue" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

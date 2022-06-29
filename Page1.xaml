@@ -1,14 +1,57 @@
-﻿<Page x:Class="traineeWPF.Page1"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:traineeWPF"
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="traineeWPF.Page1"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1100"
       Title="Page1">
 
-    <Grid>
+    <Grid x:Name="Page_1" Background="AliceBlue" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="1100" Height="450" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="317"/>
+            <ColumnDefinition Width="651"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="450"/>
+        </Grid.RowDefinitions>
+        <Border x:Name="bordp1" Background="#623ed0" CornerRadius="0,50,0,30" Panel.ZIndex="2" Grid.RowSpan="2" Height="450"  Margin="0,0,301,200" Grid.ColumnSpan="2" Width="150"/>
+        
+        <TextBlock Text="{Binding Value, ElementName=pbStatus, StringFormat=\{0:0\}%}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <DataGrid x:Name="top10" Background="AliceBlue" GridLinesVisibility="None" RowHeaderWidth ="0" ColumnHeaderHeight="30" Margin="0,50,0,200" Panel.ZIndex="1" Height="400" Width="968" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter  Property="BorderThickness" Value="0,0,0,0"/>
+                    <Setter Property="BorderBrush" Value="AliceBlue"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=""/>
+                <DataGridTextColumn Header="#" Binding="{Binding market_rank_cap, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding name, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                <DataGridTextColumn Header="Symbol" Binding="{Binding symbol, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"  Width="100"/>
+                <DataGridTextColumn Header="Current Price" Binding="{Binding current_price, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                <DataGridTextColumn Header="1h" Binding="{Binding price_change_percentage_1h_in_currency, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                <DataGridTextColumn Header="24h" Binding="{Binding price_change_percentage_24h_in_currency, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                <DataGridTextColumn Header="7d" Binding="{Binding price_change_percentage_7d_in_currency, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Volume" Binding="{Binding total_volume, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                <DataGridTextColumn Header="Mkt cap" Binding="{Binding market_cap, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="100"/>
+                
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Background="#623ed0" BorderThickness="0" Foreground="White" Panel.ZIndex="2" x:Name="P1" Content="Top 10" HorizontalAlignment="Left" Height="25" Margin="25,70,0,0" VerticalAlignment="Top" Width="90" Click="P1_Click"/>
+        <Button Background="#623ed0" BorderThickness="0" Foreground="White" Panel.ZIndex="2" x:Name="P2" Content="Trending" HorizontalAlignment="Left" Height="25" Margin="25,115,0,0" VerticalAlignment="Top" Width="90" Click="P2_Click"/>
+        <Button Background="#623ed0" BorderThickness="0" Foreground="White" Panel.ZIndex="2" x:Name="P3" Content="Search" HorizontalAlignment="Left" Height="25" Margin="25,165,0,0" VerticalAlignment="Top" Width="90" Click="P3_Click"/>
+       
+        <Button Background="#623ed0" BorderThickness="0" Foreground="White" Panel.ZIndex="2" x:Name="P5" Content="Convert" HorizontalAlignment="Left" Height="25" Margin="25,10,0,0" VerticalAlignment="Top" Width="90" Click="P5_Click" Grid.Row="1"/>
         
     </Grid>
 </Page>

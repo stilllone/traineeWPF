@@ -16,7 +16,6 @@ C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\traineeWPF.exe
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\traineeWPF.pdb
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\Newtonsoft.Json.dll
-C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\RestSharp.dll
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\System.Buffers.dll
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\System.Memory.dll
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\System.Numerics.Vectors.dll
@@ -37,3 +36,11 @@ C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\System.Threading.Tas
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\System.ValueTuple.xml
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\traineeWPF.csproj.CopyComplete
 C:\Users\evike\source\repos\traineeWPF\traineeWPF\bin\Debug\CoinGecko.dll
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page1.g.cs
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page2.g.cs
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page1.baml
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page2.baml
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page3.g.cs
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page3.baml
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page4.g.cs
+C:\Users\evike\source\repos\traineeWPF\traineeWPF\obj\Debug\Page4.baml
