@@ -45,8 +45,6 @@ namespace traineeWPF
             NavigationService.Navigate(new Page3());
         }
 
-        
-
         private void P5_Click(object sender, RoutedEventArgs e)
         {
             string SearchId = TBSearch.Text;

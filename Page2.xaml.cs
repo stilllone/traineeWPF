@@ -25,22 +25,10 @@ namespace traineeWPF
         public Page2()
         {
             InitializeComponent();
-            Models.Coin outAppi(int x)
-            {
-                Models.Coin trend = new Models.Coin();
-                trend.thumb = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.thumb;
-                trend.score = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.score;
-                trend.name = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.name;
-                trend.symbol = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.symbol;
-                trend.coin_id = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.coin_id;
-                trend.market_cap_rank = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.market_cap_rank;
-                trend.price_btc = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.price_btc;
-                
-                return trend;
-            }
+            
             for (int i = 0; i <= 6; i++)
             {
-                trending.Items.Add(outAppi(i));
+                trending.Items.Add(ViewModels.searchVM.outAppi(i));
             }
             
         }
@@ -59,13 +47,10 @@ namespace traineeWPF
         {
             NavigationService.Navigate(new Page3());
         }
-        private void P4_Click(object sender, RoutedEventArgs e)
-        {
-        NavigationService.Navigate(new Page4());
-        }
+        
         private void P5_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new Page4());
         }
 
         

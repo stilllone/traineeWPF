@@ -55,6 +55,19 @@ namespace traineeWPF.ViewModels
             return second;
             
         }
+        public static Models.Coin outAppi(int x)
+        {
+            Models.Coin trend = new Models.Coin();
+            trend.thumb = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.thumb;
+            trend.score = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.score;
+            trend.name = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.name;
+            trend.symbol = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.symbol;
+            trend.coin_id = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.coin_id;
+            trend.market_cap_rank = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.market_cap_rank;
+            trend.price_btc = ViewModels.searchVM.API("https://api.coingecko.com/api/v3/search/trending").coins[x].item.price_btc;
+
+            return trend;
+        }
         public static Models.Root t10API(int x)
         {
             Models.Root first = new Models.Root();

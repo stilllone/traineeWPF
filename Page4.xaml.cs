@@ -73,7 +73,7 @@ namespace traineeWPF
 
         private void P3_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Page2());
+            NavigationService.Navigate(new Page3());
         }
         
         private void P5_Click(object sender, RoutedEventArgs e)
